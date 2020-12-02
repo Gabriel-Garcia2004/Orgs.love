@@ -3,7 +3,7 @@ body{
     display:flex ;
 }
 #ongs-loves{
-    width: 30vw;
+    
     height: 100%;
     display:flex ;
     margin: 0px;
@@ -19,24 +19,22 @@ left:465px;
 }
 
 aside{
-    width:clamp(23rem, 24.2vw, 45rem);
+    width:clamp(20vw, 24.2vw, 25vw);
     height: 100%;
     background: linear-gradient(147.44deg, #B17BEC 73.85%, rgba(130, 76, 190, 0.463542) 101.6%, rgba(90, 36, 150, 0) 101.6%);
     position: absolute;
-
-
-}
-footer{
-    position: absolute;
-    bottom: 90px;
-    left: 30%;
-    display:flex ;
-    align-items: center;
-    
-}
-footer a{
     display:flex ;
     flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.donate-link{
+    position: relative;
+     width: 200px;
+     align-self: center;
+    
+}
+.donate-link a{
     padding: 10px;
     padding-bottom: 80px;
     font-family: Roboto;
@@ -45,10 +43,9 @@ footer a{
     font-weight: 400;
     line-height: 21px;
     letter-spacing: 0em;
-    text-align: left;
     color:#ffffff;
-    
-     
+    display:flex ;
+ 
 }
 a#img-1::before{
     content: url(/public/images/donate.svg);
@@ -80,13 +77,10 @@ a#img-3::before{
 header{
     display:flex ;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 40px;
+    
 }
-#logo{
-    display:flex ;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+
 h2{
     font-family:'Nunito', sans-serif ;
     font-style: normal;
@@ -94,16 +88,14 @@ h2{
     font-weight: 900;
     color:#ffffff;
     text-align: center;
+    margin: 40px auto 30px auto;
 }
 p{
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
-    line-height: 38px;
-    margin-top: 18px;
-    text-align: center;
     line-height: 25px;
-    padding:25px;
+    justify-content: justify;
 }
 /* MAPA*/
 

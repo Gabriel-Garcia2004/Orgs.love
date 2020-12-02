@@ -2,8 +2,8 @@
     height: 100vh;
     background-image: url('../images/landing.svg');
     background-repeat: no-repeat;
-    background-position: 35vw bottom;
-    background-position-y: 7vw;
+    background-position-x: 35vw;
+    background-position-y: 7vh;
 }
 
 #page-landing #container{
