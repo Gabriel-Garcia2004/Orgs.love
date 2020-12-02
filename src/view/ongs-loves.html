@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/public/css/page-ongs.css">
+        <link rel="stylesheet" href="/public/css/map.css">
+        <title>Gifty - Localize uma Ong</title>
+    </head>
+    <body>
+        <div id="ongs-loves">
+            <aside>
+                <header>
+                    <img id="logo"  src="/public/images/logo.svg" alt="Logomarca do Gifty" />
+                    <h2>LIFE HOPE ONG</h2>
+                    <p>Nosso objetivo é tornar a vida de moradores de rua um pouco mais tolerável.</p>
+                </header>
+                <footer>
+                    <div class="donate-link">
+                        <a id="img-1" href="#">Faça uma doação</a>
+                        <a id="img-2" href="#">Entre em contato</a>
+                        <a id="img-3" href="#">Visite nosso website</a>
+                    </div>
+                </footer>
+            </aside>
+        <article id="map">
+            <div id="mapid" >
+                <div class="city">
+                   <span>
+        
+                    </span>
+                    
+                        <a href="#" class="select-state" title="Escolha seu Estado">
+                        <span><strong>Selecione um Estado</strong></span>
+                         </a>
+                   
+                    
+                        <a href="#" class="select-city" title="Escolha sua Cidade">
+                        <span><strong>Selecione uma Cidade</strong></span>
+                        </a>
+                    
+                </div>
+            </div>
+        </article>
+        </div>
+        <script src="/public/script/ongs-loves.js"></script>
+    </body>
+</html>

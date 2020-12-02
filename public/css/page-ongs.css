@@ -1,0 +1,165 @@
+body{
+    margin: 0px;
+    display:flex ;
+}
+#ongs-loves{
+    width: 30vw;
+    height: 100%;
+    display:flex ;
+    margin: 0px;
+}
+
+#mapid{
+display:flex;
+position: absolute;
+width:75vw;
+height: 100%;
+top:0px;
+left:465px;
+}
+
+aside{
+    width:clamp(23rem, 24.2vw, 45rem);
+    height: 100%;
+    background: linear-gradient(147.44deg, #B17BEC 73.85%, rgba(130, 76, 190, 0.463542) 101.6%, rgba(90, 36, 150, 0) 101.6%);
+    position: absolute;
+
+
+}
+footer{
+    position: absolute;
+    bottom: 90px;
+    left: 30%;
+    display:flex ;
+    align-items: center;
+    
+}
+footer a{
+    display:flex ;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 80px;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#ffffff;
+    
+     
+}
+a#img-1::before{
+    content: url(/public/images/donate.svg);
+    transform: translate(0, -50%);
+    position: absolute;
+    width:73px;
+    height:73px;
+    left: -65px;
+    top: 7.5%;
+}
+a#img-2::before{
+    content: url(/public/images/whatsapp.svg);
+    transform: translate(0, -50%);
+    position: absolute;
+    width:73px;
+    height:73px;
+    left: -65px;
+    top: 44%;
+}
+a#img-3::before{
+    content: url(/public/images/website.svg);
+    transform: translate(0, -50%);
+    position: absolute;
+    width:73px;
+    height:73px;
+    left: -65px;
+    top: 79%;
+}
+header{
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#logo{
+    display:flex ;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+h2{
+    font-family:'Nunito', sans-serif ;
+    font-style: normal;
+    font-size: 26px;
+    font-weight: 900;
+    color:#ffffff;
+    text-align: center;
+}
+p{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 38px;
+    margin-top: 18px;
+    text-align: center;
+    line-height: 25px;
+    padding:25px;
+}
+/* MAPA*/
+
+.city a{
+    position: absolute;
+    z-index: 999;
+    display:flex;
+
+    text-decoration: none;
+
+}
+
+
+a.select-city{
+    top: 90%;
+    right: -300% ;
+    background-color: #B17BEC;
+    border-radius: 10px;
+    width: 247px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+a.select-state{
+    top: 90%;
+    left: 25%;
+    background-color: #B17BEC;
+    border-radius: 10px;
+    width: 247px;
+    height: 60px; 
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;  
+}
+a.select-city::before,
+a.select-state::before {
+    content: url("/public/images/localmark.svg");
+    background:  #4C4981;
+    transform: translate(0, -50%);
+    position: absolute;
+    width:63px;
+    height:63px;
+    left: -39px;
+    top: 50%;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
