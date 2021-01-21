@@ -1,0 +1,137 @@
+body{
+    height: 100vh;
+    display: grid;
+    align-content: center;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.c-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: minma 1fr; */
+    grid-template-areas: 
+    "header  ."
+    "image  form"
+    ;
+}
+.c-header{
+    grid-area: header ;
+    display: grid;
+    align-items: center;
+    justify-content:center;
+}
+.c-image{
+    grid-area: image ;
+    margin: 0 auto;
+}
+.c-image__img{
+    min-width: 450px;
+    padding: 10px;
+}
+.c-image__span{
+    color: #2d2d2d;
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 400;
+    padding: 0.3125rem;
+    display: block;
+    text-align: end;
+}
+.c-image__text{
+    color: #2d2d2d;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: 400;
+    padding: 0.3125rem;
+    text-align: end;
+
+}
+.c-acess{
+    grid-area: form ;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding: 20px;
+}
+.c-acess__form{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+.c-acess__h2{
+    color: #2d2d2d;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.3;
+    text-align: center;
+}.c-acess__input{   
+     width: 100%;
+     min-width: 250px;
+}
+.c-acess__input, .c-acess__button {
+    border-radius: 1.5rem;
+    padding: .5rem 1rem;
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
+    font-weight: 600;
+    font-size: 1.725rem;
+    opacity: .9;
+    outline: transparent;
+    transition: 500ms ease-in-out;
+}
+.c-acess__input:hover, .c-acess__button:hover{
+    opacity: 1;
+}
+.c-acess__input + .c-acess__input{
+    margin-top: 2rem;
+
+}
+.c-acess__input + .c-acess__button{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.c-acess__button{
+    background: #b17beb;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    max-width: 80%;
+    min-width: 150px;
+    align-self: center;
+}
+.c-acess__span{
+    color: #2d2d2d;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-weight: 600;
+    padding: 0.3125rem;
+    text-align: center;
+
+}
+.c-acess__link{
+    color: #2d2d2d;
+    transition: 500ms ease-in-out;
+}
+.c-acess__link:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:900px){
+    .c-box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header "
+        "form"
+        
+        ;
+    }
+    .c-image__img, .c-image__span, .c-image__text{
+        display: none;
+    }
+}
+

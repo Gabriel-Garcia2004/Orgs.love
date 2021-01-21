@@ -1,157 +1,198 @@
-body{
-    margin: 0px;
-    display:flex ;
-}
-#ongs-loves{
-    
+#ongs-loves {
+    width: 100%;
     height: 100%;
-    display:flex ;
-    margin: 0px;
+    display: flex;
 }
 
-#mapid{
-display:flex;
-position: absolute;
-width:75vw;
-height: 100%;
-top:0px;
-left:465px;
-}
-
-aside{
-    width:clamp(20vw, 24.2vw, 25vw);
-    height: 100%;
-    background: linear-gradient(147.44deg, #B17BEC 73.85%, rgba(130, 76, 190, 0.463542) 101.6%, rgba(90, 36, 150, 0) 101.6%);
-    position: absolute;
-    display:flex ;
+header {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-}
-.donate-link{
-    position: relative;
-     width: 200px;
-     align-self: center;
-    
-}
-.donate-link a{
-    padding: 10px;
-    padding-bottom: 80px;
-    font-family: Roboto;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0em;
-    color:#ffffff;
-    display:flex ;
- 
-}
-a#img-1::before{
-    content: url(/public/images/donate.svg);
-    transform: translate(0, -50%);
-    position: absolute;
-    width:73px;
-    height:73px;
-    left: -65px;
-    top: 7.5%;
-}
-a#img-2::before{
-    content: url(/public/images/whatsapp.svg);
-    transform: translate(0, -50%);
-    position: absolute;
-    width:73px;
-    height:73px;
-    left: -65px;
-    top: 44%;
-}
-a#img-3::before{
-    content: url(/public/images/website.svg);
-    transform: translate(0, -50%);
-    position: absolute;
-    width:73px;
-    height:73px;
-    left: -65px;
-    top: 79%;
-}
-header{
-    display:flex ;
-    flex-direction: column;
-    padding: 40px;
-    
+    padding: 2.5rem;
 }
 
-h2{
-    font-family:'Nunito', sans-serif ;
-    font-style: normal;
-    font-size: 26px;
-    font-weight: 900;
-    color:#ffffff;
-    text-align: center;
-    margin: 40px auto 30px auto;
+aside.c-main__aside {
+  width: clamp(20rem, 22vw, 44rem);
+  height: 100vh;
+  background: linear-gradient(147.44deg,#b17bec 73.85%,rgba(130, 76, 190, 0.463542) 101.6%,rgba(90, 36, 150, 0) 101.6%);
+  padding: clamp(3rem, 5vw, 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-p{
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 25px;
-    justify-content: justify;
+
+aside h2{
+    margin-top: 1.4rem;
+    font: 800 clamp(1rem, 3vw, 1.6rem)/1.1 'Nunito', sans-serif;
+    color: white;
 }
+
+aside p{
+    margin-top: 2.4rem;
+    font: 800 clamp(.5rem, .7rem, 25px ).7rem/1.5 'Nunito', sans-serif;
+    color: rgb(85, 83, 77);
+}
+
+#mapid {
+    width: 100vw;
+    height: 100vh;
+}
+.donate-link a {
+  margin-bottom: 2.18rem;
+  font-family: 'Nunito';
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+a#img-1::before {
+  content: url(/public/images/donate.svg);
+  transform: translate(0, -50%);
+  position: absolute;
+  padding-left: 1%;
+  width: 73px;
+  height: 73px;
+  left: 0px;
+  bottom: 25.5%;
+}
+a#img-2::before {
+  content: url(/public/images/whatsapp.svg);
+  transform: translate(0, -50%);
+  position: absolute;
+  padding-left: 1%;
+  width: 73px;
+  height: 73px;
+  left: 0px;
+  bottom: 15%;
+}
+a#img-3::before {
+  content: url(/public/images/website.svg);
+  transform: translate(0, -50%);
+  position: absolute;
+  padding-left: 1%;
+  width: 73px;
+  height: 73px;
+  left: 0px;
+  bottom: 4%;
+}
+
 /* MAPA*/
 
-.city a{
-    position: absolute;
+.city{
+    display: flex;
+    justify-content: space-between;
     z-index: 999;
-    display:flex;
-
-    text-decoration: none;
-
-}
-
-
-a.select-city{
-    top: 90%;
-    right: -300% ;
-    background-color: #B17BEC;
-    border-radius: 10px;
-    width: 247px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 900;
-    font-family: 'Nunito', sans-serif;
-    
 }
 
 a.select-state{
-    top: 90%;
-    left: 25%;
-    background-color: #B17BEC;
-    border-radius: 10px;
-    width: 247px;
-    height: 60px; 
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 900;
-    font-family: 'Nunito', sans-serif;  
+    left: clamp(30vw, 25rem, 70%);
+    bottom: 4rem;
 }
-a.select-city::before,
-a.select-state::before {
-    content: url("/public/images/localmark.svg");
-    background:  #4C4981;
-    transform: translate(0, -50%);
+a.select-city{
+    right: clamp(8vw, 10rem, 40%);
+    bottom: 4rem;
+}
+
+a.select-city,
+a.select-state{
     position: absolute;
-    width:63px;
-    height:63px;
-    left: -39px;
-    top: 50%;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
+    right: 4rem;
+    bottom: 4rem;
+    width: 22rem;
+    height: 72px;
+    text-indent: 5px;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+
+    background: #B17BEC;
+    border: 0;
+    border-radius: 8px;
+
     display: flex;
+    align-items: center;
+
+    transition: 400ms;
+    text-transform: uppercase;
 }
+
+a.select-city:hover,
+a.select-state:hover{
+    background: #9164c2;
+}
+
+a.select-city span,
+a.select-state span{
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    
+}
+
+a.select-city span::after,
+a.select-state span::after{
+    content:"";
+    background-image: url('../images/localmark.svg');
+    width: 38px;
+    height: 38px;
+}
+@media (min-width:0px) and (max-width:1023px)  {
+    aside.c-main__aside {
+        width: none;
+        height: none;
+        background: none;
+        padding: none;
+        display: none;
+      }
+      .u-modal__container{
+          width:100vw;
+          height: 100vh;
+          background-color: blue;
+          position: fixed;
+          top:0px;
+          left: 0px;
+          z-index: 9999 !important;
+      }
+      .city a{
+        width: none;
+        height: none;
+        background: none;
+        padding: none;
+        display: none;
+         
+    }
+    #mapid{
+         display: none;
+         height: none;
+         width: none;
+        }
+        a.select-city,
+        a.select-state{  
+            width: 22rem;
+            height: 72px;
+            text-indent: 5px;
+            font-size: 1.1rem;
+            color: #FFFFFF;
+        
+            background: #B17BEC;
+            border: 0;
+            border-radius: 8px;
+        
+            display: flex;
+            flex:1;
+            transition: 400ms;
+            text-transform: uppercase;
+        }
+        
+        
+    }
+ 
