@@ -13,7 +13,7 @@ img{
     /* grid-template-rows: minma 1fr; */
     grid-template-areas: 
     "header  ."
-    "image  form"
+    "image  info"
     ;
 }
 .c-header{
@@ -25,9 +25,9 @@ img{
 }
 .c-image{
     grid-area: image ;
-    margin: 0 auto;
     display: grid;
     align-self: center;
+    margin: 0 auto;
 }
 .c-image__img{
     min-width: 450px;
@@ -51,49 +51,39 @@ img{
     text-align: end;
 
 }
-.c-acess{
-    grid-area: form ;
+.c-registration-information{
+    grid-area: info ;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content: center;
+    margin: 0 auto;
     padding: 20px;
+    max-width: 600px;
 }
-.c-acess__form{
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
+.c-registration-information__item{
+    list-style: none;
 }
-.c-acess__h2{
+.c-registration-information__h2{
     color: #2d2d2d;
     font-size: 2.5rem;
     margin-bottom: 2.5rem;
     line-height: 1.3;
     text-align: center;
-}.c-acess__input{   
-     width: 100%;
-     min-width: 250px;
 }
-.c-acess__input, .c-acess__button {
+.c-registration-information__list{
+    color: #2d2d2d;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.3;
+
+}
+ .c-registration-information__button {
     border-radius: 1.5rem;
     padding: .5rem 1rem;
-    border: none;
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
     font-weight: 600;
-    font-size: 1.725rem;
+    font-size: 1.5rem;
     outline: transparent;
     transition: 500ms ease-in-out;
-}
-.c-acess__input + .c-acess__input{
-    margin-top: 2rem;
-
-}
-.c-acess__input + .c-acess__button{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.c-acess__button{
     background: #b17beb;
     color: #fff;
     text-align: center;
@@ -101,22 +91,6 @@ img{
     max-width: 80%;
     min-width: 150px;
     align-self: center;
-}
-.c-acess__span{
-    color: #2d2d2d;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    font-weight: 600;
-    padding: 0.3125rem;
-    text-align: center;
-
-}
-.c-acess__link{
-    color: #2d2d2d;
-    transition: 500ms ease-in-out;
-}
-.c-acess__link:hover{
-    text-decoration: underline;
 }
 
 @media(max-width:950px){
@@ -126,7 +100,7 @@ img{
         grid-template-columns: 1fr;
         grid-template-areas: 
         "header "
-        "form"
+        "info"
         
         ;
     }

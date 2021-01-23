@@ -10,7 +10,6 @@ img{
 .c-box{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: minma 1fr; */
     grid-template-areas: 
     "header  ."
     "image  form"
@@ -51,7 +50,7 @@ img{
     text-align: end;
 
 }
-.c-acess{
+.c-create-account{
     grid-area: form ;
     display: flex;
     flex-direction: column;
@@ -59,41 +58,44 @@ img{
     justify-content: center;
     padding: 20px;
 }
-.c-acess__form{
+.c-create-account__form{
     display: flex;
     flex-direction: column;
     max-width: 100%;
 }
-.c-acess__h2{
+.c-create-account__h2{
     color: #2d2d2d;
     font-size: 2.5rem;
     margin-bottom: 2.5rem;
     line-height: 1.3;
     text-align: center;
-}.c-acess__input{   
+}.c-create-account__input{   
      width: 100%;
      min-width: 250px;
 }
-.c-acess__input, .c-acess__button {
+.c-create-account__input, .c-create-account__button {
     border-radius: 1.5rem;
     padding: .5rem 1rem;
-    border: none;
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
     font-weight: 600;
     font-size: 1.725rem;
+    opacity: .9;
     outline: transparent;
     transition: 500ms ease-in-out;
 }
-.c-acess__input + .c-acess__input{
+.c-create-account__input:hover, .c-create-account__button:hover{
+    opacity: 1;
+}
+.c-create-account__input + .c-create-account__input{
     margin-top: 2rem;
 
 }
-.c-acess__input + .c-acess__button{
+.c-create-account__input + .c-create-account__button{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.c-acess__button{
+.c-create-account__button{
     background: #b17beb;
     color: #fff;
     text-align: center;
@@ -102,25 +104,28 @@ img{
     min-width: 150px;
     align-self: center;
 }
-.c-acess__span{
+.c-create-account__span{
     color: #2d2d2d;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.3;
     font-weight: 600;
     padding: 0.3125rem;
     text-align: center;
-
+    max-width: 400px;
+    padding: 15px;
 }
-.c-acess__link{
+.c-create-account__link{
     color: #2d2d2d;
     transition: 500ms ease-in-out;
 }
-.c-acess__link:hover{
+.c-create-account__link:hover{
     text-decoration: underline;
 }
 
-@media(max-width:950px){
-
+@media(max-width:900px){
+    body{
+        height:100%;
+    }
     .c-box{
         display: grid;
         grid-template-columns: 1fr;
@@ -134,8 +139,4 @@ img{
         display: none;
     }
 }
-@media(max-width: 500px){
-    body{
-        height:100%;
-    }
-}
+

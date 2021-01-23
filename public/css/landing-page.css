@@ -1,33 +1,46 @@
 body{
     height: 100vh;
-    background-image: url('../images/landing.svg');
-    background-repeat: no-repeat;
-    background-position: clamp(85%, 46vw, 55vw ) 80%;
+    display: grid;
+    align-content: center;
 }
-
+img{
+    display: block;
+    max-width: 100%;
+    width:
+}
 .c-box{
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header  ."
+    "content image"
+    ;
 }
-
 .c-header{
-    margin-top: 48px;
-    display: flex;
+    grid-area: header ;
+    display: grid;
     align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
+    justify-content:center;
+    margin-top: 2rem;
+}
+.c-image{
+    display: grid;
+    grid-area: image ;
+    align-items: flex-end;
+}
+.c-image__img{
+    min-width: 450px;
+    padding: 10px;
 }
 
 .c-content{
+    grid-area: content ;
     max-width: 560px;
-    flex: 1;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
@@ -36,6 +49,7 @@ body{
     font-weight: 900;
     line-height: 1;
     color:#B17BEC ;
+    text-align: center;
 }
 
 .c-content__text{
@@ -67,11 +81,7 @@ body{
     font-weight: bold;
     position: relative;
     color: #fff;
-    opacity: 0.93;
     margin: 0 10px;
-}
-.c-content__link:hover{
-    opacity: 1;
 }
 
 .c-content__link + .c-content__link{
@@ -93,7 +103,7 @@ body{
     align-items: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    opacity: 1;
+    : 1;
 
 }
 
@@ -112,38 +122,20 @@ body{
 .c-content__text-link{
     margin-left: -30px ;
 }
-@media (max-width:1023px) {
-    body{
-        background-image: none;
-    }
-    .c-header{
-        justify-content: center;
-        flex: 0;
-        margin-top: 30px;
 
-    }
-    .c-content{
-        margin: 20% auto;
-        flex: 0;
-    }
-    .c-content__title{
-        text-align: center ;
-        margin: 10px auto;
-        font-size: 2.5rem;
-    }
-    .c-content__container{
-        margin: 0 auto;
+@media(max-width:900px){
+    .c-box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header "
+        "content"
+        ;
     }
     .c-content__text{
-       text-align: justify;
+        text-align:center;
     }
-    .c-content__buttons{
-        padding: ;
-    }
-    .c-content__link{
-        font-size: 1.25rem;
-    }
-    .c-content__text-link{
-        margin-left: 0px ;
+    .c-image__img, .c-image__span, .c-image__text{
+        display: none;
     }
 }

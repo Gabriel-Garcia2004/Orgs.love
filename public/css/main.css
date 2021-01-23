@@ -17,3 +17,40 @@ body, input, button, textarea{
 a{
     text-decoration: none;
 }
+input, textarea, .u-button{
+    border: 1px solid rgba(0,0,0,.1);
+    transition: 200ms ease-in;
+}
+input:hover, 
+textarea:hover{
+    border: 1px solid #b1b1b1;
+}
+input:focus,
+textarea:focus{
+    outline: transparent;
+    border: 1px solid #666565;
+}
+input:valid {
+    border: 1px solid #0bf580;
+}
+textarea:valid{
+    border: 1px solid #0bf580;
+}
+
+.u-button:hover{
+    border: 1px solid #4c4981;
+}
+.-button:focus{
+    outline: transparent;
+    border: 1px solid #4c4981;
+}
+.u-close{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d2d2d;
+    transition: 300ms ease-in-out;
+}
+.u-close:hover{
+    text-decoration: underline;
+}

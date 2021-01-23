@@ -10,24 +10,33 @@ img{
 .c-box{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: minma 1fr; */
     grid-template-areas: 
-    "header  ."
+    "header  close"
     "image  form"
     ;
 }
+
 .c-header{
     grid-area: header ;
     display: grid;
     align-items: center;
     justify-content:center;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    padding: 10px 10px 0 10px;
+
+}
+.c-close{
+    grid-area: close;
+    display: grid;
+    align-items: end;
+    justify-content: end;
+    padding: 0 40px 0 0;
 }
 .c-image{
     grid-area: image ;
-    margin: 0 auto;
     display: grid;
-    align-self: center;
+    align-items: center;
+    margin: 0 auto;
 }
 .c-image__img{
     min-width: 450px;
@@ -51,58 +60,74 @@ img{
     text-align: end;
 
 }
-.c-acess{
-    grid-area: form ;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+.c-register-an-ngo{
+    grid-area: form;
+    display: grid;
+    grid-template-areas: "title title" "form-1 form-2";
+    gap: 20px;
+    align-items:start;
     justify-content: center;
-    padding: 20px;
+    padding:20px;
 }
-.c-acess__form{
+.u-form-1{
+    grid-area: form-1;
+}
+.u-form-2{
+    grid-area: form-2;
+}
+.c-register-an-ngo__form{
     display: flex;
     flex-direction: column;
     max-width: 100%;
 }
-.c-acess__h2{
+.c-register-an-ngo__h2{
     color: #2d2d2d;
     font-size: 2.5rem;
     margin-bottom: 2.5rem;
     line-height: 1.3;
     text-align: center;
-}.c-acess__input{   
+    grid-area: title;
+}
+.c-register-an-ngo__input{   
      width: 100%;
      min-width: 250px;
+     flex: 1;
 }
-.c-acess__input, .c-acess__button {
+.c-register-an-ngo__input, .c-register-an-ngo__button, .c-register-an-ngo__text-area {
     border-radius: 1.5rem;
     padding: .5rem 1rem;
-    border: none;
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
     font-weight: 600;
     font-size: 1.725rem;
     outline: transparent;
     transition: 500ms ease-in-out;
 }
-.c-acess__input + .c-acess__input{
+
+.c-register-an-ngo__input + .c-register-an-ngo__input, .c-register-an-ngo__input + .c-register-an-ngo__text-area{
     margin-top: 2rem;
 
 }
-.c-acess__input + .c-acess__button{
+
+.c-register-an-ngo__input + .c-register-an-ngo__button{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
-.c-acess__button{
+.c-register-an-ngo__text-area{
+    height: 230px;
+    resize: none;
+    overflow-y: hidden;
+}
+.c-register-an-ngo__button{
     background: #b17beb;
     color: #fff;
     text-align: center;
     padding: 1rem;
     max-width: 80%;
     min-width: 150px;
-    align-self: center;
+    display: inline-block;
+    margin: 0 auto;
 }
-.c-acess__span{
+.c-register-an-ngo__span{
     color: #2d2d2d;
     font-size: 1.5rem;
     line-height: 1.3;
@@ -111,31 +136,59 @@ img{
     text-align: center;
 
 }
-.c-acess__link{
+.c-register-an-ngo__link{
     color: #2d2d2d;
     transition: 500ms ease-in-out;
 }
-.c-acess__link:hover{
+.c-register-an-ngo__link:hover{
     text-decoration: underline;
 }
 
-@media(max-width:950px){
-
+@media(max-width:970px){
     .c-box{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns:  1fr 1fr ;
         grid-template-areas: 
-        "header "
-        "form"
-        
+        "header close "
+        " form form"
         ;
     }
     .c-image__img, .c-image__span, .c-image__text{
         display: none;
     }
 }
-@media(max-width: 500px){
+@media(max-width:600px){
     body{
-        height:100%;
+        height: 100%;
     }
+    .c-register-an-ngo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "title title"
+        "form-1 form-1"
+        "form-2 form-2"
+        "button-1 button-2"
+        ;
+        gap: 2rem;
+    }
+    .u-button-1{
+        grid-area: button-1;
+
+    }
+    .u-button-2{
+        grid-area: button-2;
+    }
+    .c-register-an-ngo__button{
+        max-width: 80%;
+        min-width: 100px;
+        display: grid;
+        justify-content: center;
+    }
+    .c-close{
+        padding: 0;
+    }
+    
 }
+
+
