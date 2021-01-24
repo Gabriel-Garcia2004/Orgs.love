@@ -149,7 +149,7 @@ img{
         display: grid;
         grid-template-columns:  1fr 1fr ;
         grid-template-areas: 
-        "header close "
+        "header header "
         " form form"
         ;
     }
@@ -170,7 +170,7 @@ img{
         "form-2 form-2"
         "button-1 button-2"
         ;
-        gap: 2rem;
+        column-gap: 0rem;
     }
     .u-button-1{
         grid-area: button-1;
@@ -181,7 +181,7 @@ img{
     }
     .c-register-an-ngo__button{
         max-width: 80%;
-        min-width: 100px;
+        min-width: 140px;
         display: grid;
         justify-content: center;
     }

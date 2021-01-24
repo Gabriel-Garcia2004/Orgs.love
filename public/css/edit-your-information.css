@@ -11,7 +11,7 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    "header  ."
+    "header  close"
     "image  form"
     ;
 }
@@ -138,7 +138,7 @@ img{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-        "header header "
+        "header close "
         "form form" 
         ;
     }
@@ -155,7 +155,7 @@ img{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-        "header header"
+        "header close"
         "title title"
         "form-1 form-1"
         "form-2 form-2"
@@ -172,7 +172,7 @@ img{
     }
     .c-your-information__button{
         max-width: 80%;
-        min-width: 140px;
+        min-width: 100px;
         display: grid;
         justify-content: center;
     }

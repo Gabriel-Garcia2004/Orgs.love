@@ -10,7 +10,7 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    "header  ."
+    "header  close"
     "image  form"
     ;
 }
@@ -59,7 +59,7 @@ img{
     text-align: end;
 
 }
-.c-payment-methods{
+.c-edit-payment-methods{
     grid-area: form;
     display: grid;
     grid-template-areas: 
@@ -89,12 +89,12 @@ img{
     justify-content:center;
     align-items:flex-start;
 }
-.c-payment-methods__form{
+.c-edit-payment-methods__form{
     display: flex;
     flex-direction: column;
     max-width: 100%;
 }
-.c-payment-methods__h2{
+.c-edit-payment-methods__h2{
     color: #2d2d2d;
     font-size: 2.5rem;
     margin-bottom: 2.5rem;
@@ -102,7 +102,7 @@ img{
     text-align: center;
     grid-area: title;
 }
-.c-payment-methods__h3{
+.c-edit-payment-methods__h3{
     color: #2d2d2d;
     font-size: 2rem;
     margin-bottom: 2.5rem;
@@ -116,20 +116,20 @@ img{
 .u-link-2{
     grid-area: span-2;
 }
-.c-payment-methods__span{
+.c-edit-payment-methods__span{
     display: flex;
     align-items: center;
     justify-content:center;
 }
-.c-payment-methods__link{
+.c-edit-payment-methods__link{
     display: flex;
     align-items: center;
     justify-content:center;
 }
-.c-payment-methods__img-1{
+.c-edit-payment-methods__img-1{
     height: 55px;
 }
-.c-payment-methods__text-link{
+.c-edit-payment-methods__text-link{
     /* height: 55px; */
     min-width: 200px;
     background: #fff;
@@ -144,17 +144,17 @@ img{
     margin: 10px;
 }
 
-.u-span-1 .c-payment-methods__link{
+.u-span-1 .c-edit-payment-methods__link{
     margin-left: 10px;
 }
-.u-span-2 .c-payment-methods__link{
+.u-span-2 .c-edit-payment-methods__link{
     margin-left: 22px;
 }
-.c-payment-methods__input{   
+.c-edit-payment-methods__input{   
      max-width: 250px;
      min-width: 250px;
 }
-.c-payment-methods__input, .c-payment-methods__button, .c-payment-methods__text-area {
+.c-edit-payment-methods__input, .c-edit-payment-methods__button, .c-edit-payment-methods__text-area {
     border-radius: 1.5rem;
     padding: .5rem 1rem;
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
@@ -164,27 +164,27 @@ img{
     transition: 500ms ease-in-out;
 }
 
-.c-payment-methods__input + .c-payment-methods__input, .c-payment-methods__input + .c-payment-methods__text-area{
+.c-edit-payment-methods__input + .c-edit-payment-methods__input, .c-edit-payment-methods__input + .c-edit-payment-methods__text-area{
     margin-top: 2rem;
 
 }
 
-.c-payment-methods__input + .c-payment-methods__button{
+.c-edit-payment-methods__input + .c-edit-payment-methods__button{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.c-payment-methods__text-area{
+.c-edit-payment-methods__text-area{
     height: 230px;
     resize: none;
     overflow-y: hidden;
 }
-.c-payment-methods__buttons{
+.c-edit-payment-methods__buttons{
     grid-area: button;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.c-payment-methods__button{
+.c-edit-payment-methods__button{
     background: #b17beb;
     color: #fff;
     text-align: center;
@@ -194,7 +194,7 @@ img{
     min-width: 150px;
     display: block;
 }
-.c-payment-methods__span{
+.c-edit-payment-methods__span{
     color: #2d2d2d;
     font-size: 1.5rem;
     line-height: 1.3;
@@ -203,11 +203,11 @@ img{
     text-align: center;
 
 }
-.c-payment-methods__link{
+.c-edit-payment-methods__link{
     color: #2d2d2d;
     transition: 500ms ease-in-out;
 }
-.c-payment-methods__link:hover{
+.c-edit-payment-methods__link:hover{
     text-decoration: underline;
 }
 
@@ -221,11 +221,11 @@ img{
         display: grid;
         grid-template-columns:  1fr 1fr ;
         grid-template-areas: 
-        "header header "
+        "header close "
         " form form"
         ;
     }
-    .c-payment-methods{
+    .c-edit-payment-methods{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
@@ -240,13 +240,13 @@ img{
     .u-form-2{
         align-items: center;
     }
-    .c-payment-methods__h3{
+    .c-edit-payment-methods__h3{
         margin: 0 auto;
     }
-    .c-payment-methods__buttons{
+    .c-edit-payment-methods__buttons{
         justify-content: center;
     }
-    .c-payment-methods__button{
+    .c-edit-payment-methods__button{
         max-width: 50%;
 
     }
@@ -258,7 +258,7 @@ img{
     body{
         height: 100%;
     }
-    .c-payment-methods{
+    .c-edit-payment-methods{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -279,7 +279,7 @@ img{
     .u-button-2{
         grid-area: button-2;
     }
-    .c-payment-methods__button{
+    .c-edit-payment-methods__button{
         max-width: 45%;
         min-width: 140px;
         display: grid;
