@@ -9,7 +9,6 @@
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
       crossorigin=""
     />
-
     <script 
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -17,44 +16,46 @@
     ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="/public/css/main.css" />
     <link rel="stylesheet" href="/public/css/page-ongs.css" />
-    <link rel="stylesheet" href="/public/css/responsive.css" />
 
-    <title>Gifty - Localize uma Ong</title>
+    <title>Gifty | Localize uma Ong</title>
   </head>
   <body>
-    <div id="ongs-loves" class="u-modal__container">
-      <aside class="c-main__aside" class="u-modal__mobile">
-        <header>
-          <img
-            id="logo"
-            src="/public/images/logo.svg"
-            alt="Logomarca do Gifty"
-          />
-          <h2>ONG NAME</h2>
-          <p>SHORT DESCRIPTION</p>
+    <article class="c-box">
+      <aside class="c-aside u-modal js-hidden js-not-hidden">
+        <header class="c-aside__header">
+          <img class="c-asider__logo" src="../public/images/logo.svg" alt="Logomarca do Gifty"/>
+          <div class="c-aside__content">
+            <h2 class="c-aside__h2">LIFE HOPE ONG</h2>
+            <p class="c-aside__text">Nosso objetivo é tornar a vida de moradores de rua um pouco mais tolerável.</p>
+          </div>
         </header>
-        <div class="donate-link">
-          <a id="img-1" href="#">Faça uma doação</a>
-          <a id="img-2" href="#">Entre em contato</a>
-          <a id="img-3" href="#">Visite nosso website</a>
+        <div class="c-aside__links">
+          <a class="c-aside__link u-link-1" href="#"><img class="c-aside__img-1" src="../public/images/donate.svg" alt=""><p class="c-aside__text-link">Faça uma doação</p></a></span>
+          <a class="c-aside__link u-link-1" href="#"><img class="c-aside__img-1" src="../public/images/whatsapp.svg" alt=""><p class="c-aside__text-link">Entre em contato</p></a></span>
+          <a class="c-aside__link u-link-1" href="#"><img class="c-aside__img-1" src="../public/images/website.svg" alt=""><p class="c-aside__text-link">Visite nosso site</p></a></span>
+        </div>
+        <div class="c-aside__buttons">
+          <a class="c-aside__button u-button" href="#">Mapa</a>
         </div>
       </aside>
-
-      <div id="mapid" class="is-open"></div>
-
-      <div class="city">
-        <a href="#" class="select-state" title="Escolha seu Estado">
-          <span></span><strong>Selecionar um Estado</strong>
-        </a>
-        <a href="#" class="select-city" title="Escolha sua Cidade">
-          <span></span><strong>Selecionar uma Cidade</strong>
-        </a>
-      </div>
-    </div>
+      <section id="mapid" class="c-map">
+        
+          <a class="c-map__menu" href="#">x</a>
+        
+        <div class="c-map__buttons">
+          <a class="c-map__link u-button" href="#" title="Encontar um Estado">
+            <p class="c-map__text-link">Encontar um Estado</p>
+          </a>
+          <a class="c-map__link u-button" href="#" title="Encontrar uma cidade">
+          <p class="c-map__text-link">Encontrar uma cidade</p>
+          </a>
+        </div>
+        
+      </section>
+    </article>
     <script src="/public/script/ongs-loves.js"></script>
   </body>
 </html>

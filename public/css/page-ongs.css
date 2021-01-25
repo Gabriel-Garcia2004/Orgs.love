@@ -1,198 +1,210 @@
-#ongs-loves {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    padding: 2.5rem;
-}
-
-aside.c-main__aside {
-  width: clamp(20rem, 22vw, 44rem);
+body {
+  width: 100vw;
   height: 100vh;
-  background: linear-gradient(147.44deg,#b17bec 73.85%,rgba(130, 76, 190, 0.463542) 101.6%,rgba(90, 36, 150, 0) 101.6%);
-  padding: clamp(3rem, 5vw, 8rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
-
-aside h2{
-    margin-top: 1.4rem;
-    font: 800 clamp(1rem, 3vw, 1.6rem)/1.1 'Nunito', sans-serif;
-    color: white;
+.js-hidden{
+    display: none;
 }
-
-aside p{
-    margin-top: 2.4rem;
-    font: 800 clamp(.5rem, .7rem, 25px ).7rem/1.5 'Nunito', sans-serif;
-    color: rgb(85, 83, 77);
+.js-not-hidden{
+    display: grid;
 }
-
-#mapid {
-    width: 100vw;
-    height: 100vh;
+.c-box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(250px, 500px) minmax(500px, 2fr);
+  grid-template-areas: "aside map";
 }
-.donate-link a {
-  margin-bottom: 2.18rem;
-  font-family: 'Nunito';
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  color: #ffffff;
+.c-aside {
+  grid-area: aside;
+  padding: 10px;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "links";
+  align-items: center;
+  background: #b17beb;
+}
+.c-aside__header {
+  height: 80%;
+  grid-area: header;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-a#img-1::before {
-  content: url(/public/images/donate.svg);
-  transform: translate(0, -50%);
-  position: absolute;
-  padding-left: 1%;
-  width: 73px;
-  height: 73px;
+
+.c-aside__h2 {
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  text-align: center;
+}
+.c-aside__text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+}
+.c-aside__links {
+  grid-area: links;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 80%;
+}
+.c-aside__link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.c-aside__link + .c-aside__link {
+  margin-top: 2rem;
+}
+.c-aside__text-link {
+  margin: 0 10px;
+}
+.c-aside__buttons{
+    display: none;
+}
+/* Map */
+.c-map {
+  display: grid;
+  align-items: flex-end;
+  justify-content: center;
+}
+.c-map__menu{
+    display: none;
+}
+.c-map__buttons {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px 20px 50px;
+  justify-content: center;
+  grid-row: 2;
+}
+.c-map__link {
+  width: 100%;
+  min-width: 180px;
+  max-width: 360px;
+  height: 72px;
+  border-radius: 1rem 0.5rem 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #b17bec;
+  transition: 400ms;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  margin: 0 10px;
+  z-index: 2000000;
+}
+
+.c-map__link + .c-map__link {
+  margin-left: 2.5rem;
+}
+
+.c-map__link::before {
+  content: url("../images/localmark.svg");
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
   left: 0px;
-  bottom: 25.5%;
-}
-a#img-2::before {
-  content: url(/public/images/whatsapp.svg);
-  transform: translate(0, -50%);
-  position: absolute;
-  padding-left: 1%;
-  width: 73px;
-  height: 73px;
-  left: 0px;
-  bottom: 15%;
-}
-a#img-3::before {
-  content: url(/public/images/website.svg);
-  transform: translate(0, -50%);
-  position: absolute;
-  padding-left: 1%;
-  width: 73px;
-  height: 73px;
-  left: 0px;
-  bottom: 4%;
+  top: 55%;
+  background: #4c4981;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
 }
 
-/* MAPA*/
-
-.city{
-    display: flex;
-    justify-content: space-between;
-    z-index: 999;
+.c-map__text-link {
+  margin-left: -30px;
+  color: #fff;
+  padding: 5px;
 }
 
-a.select-state{
-    left: clamp(30vw, 25rem, 70%);
-    bottom: 4rem;
-}
-a.select-city{
-    right: clamp(8vw, 10rem, 40%);
-    bottom: 4rem;
-}
-
-a.select-city,
-a.select-state{
-    position: absolute;
-    right: 4rem;
-    bottom: 4rem;
-    width: 22rem;
-    height: 72px;
-    text-indent: 5px;
-    font-size: 1.1rem;
-    color: #FFFFFF;
-
-    background: #B17BEC;
-    border: 0;
-    border-radius: 8px;
-
-    display: flex;
-    align-items: center;
-
-    transition: 400ms;
-    text-transform: uppercase;
-}
-
-a.select-city:hover,
-a.select-state:hover{
-    background: #9164c2;
-}
-
-a.select-city span,
-a.select-state span{
-    width: 72px;
-    height: 72px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: rgba(0,0,0,0.08);
-    display: flex;
-    align-items: center;
+/* Responsive */
+@media (max-width: 900px) {
+  /* .c-box {
+    width: 100%;
+    height: 100%;
+    display: block;
+    grid-template-columns: minmax(250px, 500px) minmax(500px, 2fr);
+    grid-template-areas: "aside map";
+  } */
+  .c-aside {
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+    "header"
+    "links"
+    "button"
+    ;
+  }
+  .c-aside__buttons{
+    display: grid;
+    align-self: center;
     justify-content: center;
-    padding: 5px;
+    grid-area: button;
+
+  }
+  .c-aside__button{
+    background: #4c4981;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    max-width: 80%;
+    min-width: 150px;
+    border-radius: 1.5rem;
     
 }
-
-a.select-city span::after,
-a.select-state span::after{
-    content:"";
-    background-image: url('../images/localmark.svg');
-    width: 38px;
-    height: 38px;
+  .c-aside__text{
+      max-width: 400px;
+  }
+  .c-map {
+    width: 100%;
+    height: 100%;
+  }
+  .c-map__menu{
+      display: flex;
+      padding: 10px;
+      background: #b17beb;
+      border-radius: 40%;
+      position: absolute;
+      top: 20px;
+      right: 20px ;
+      z-index: 20000000;
+      color: #fff !important;
+      font-weight: 800;
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+  .c-map__menu-link{
+      color: #fff !important;
+      font-weight: 800;
+      font-size: 1.5rem;
+  }
+  .c-map__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 20px 50px;
+    justify-content: center;
+  }
+  .c-map__link{
+      margin: 0;
+  }
+  .c-map__link + .c-map__link {
+    margin-top: 1rem;
+    margin-left: 0rem;
+  }
 }
-@media (min-width:0px) and (max-width:1023px)  {
-    aside.c-main__aside {
-        width: none;
-        height: none;
-        background: none;
-        padding: none;
-        display: none;
-      }
-      .u-modal__container{
-          width:100vw;
-          height: 100vh;
-          background-color: blue;
-          position: fixed;
-          top:0px;
-          left: 0px;
-          z-index: 9999 !important;
-      }
-      .city a{
-        width: none;
-        height: none;
-        background: none;
-        padding: none;
-        display: none;
-         
-    }
-    #mapid{
-         display: none;
-         height: none;
-         width: none;
-        }
-        a.select-city,
-        a.select-state{  
-            width: 22rem;
-            height: 72px;
-            text-indent: 5px;
-            font-size: 1.1rem;
-            color: #FFFFFF;
-        
-            background: #B17BEC;
-            border: 0;
-            border-radius: 8px;
-        
-            display: flex;
-            flex:1;
-            transition: 400ms;
-            text-transform: uppercase;
-        }
-        
-        
-    }
- 

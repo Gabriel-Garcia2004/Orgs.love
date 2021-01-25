@@ -6,7 +6,6 @@ body{
 img{
     display: block;
     max-width: 100%;
-    width:
 }
 .c-box{
     display: grid;
@@ -103,8 +102,6 @@ img{
     align-items: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    : 1;
-
 }
 
 .c-content__link:last-child:before{
